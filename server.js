@@ -31,7 +31,7 @@ const forceSSL = function() {
 
 // Run the app by serving the static files
 // in the dist directory
-app.use(express.static(__dirname + '/dist/frontend'));
+app.use(express.static(__dirname + '/dist/pokusaj100'));
 // Start the app by listening on the default
 // Heroku port
 app.listen(process.env.PORT || 4200, function() {
