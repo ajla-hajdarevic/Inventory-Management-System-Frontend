@@ -7,9 +7,10 @@ import {RouterModule} from "@angular/router";
 import {LoginComponent} from "../login/login.component";
 import { InventoryListComponent } from './inventory-list/inventory-list.component';
 import { FormComponent } from './form/form.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, FooterComponent, InventoryListComponent, FormComponent],
+  declarations: [LayoutComponent, HeaderComponent, FooterComponent, InventoryListComponent, FormComponent, TableComponent],
   imports: [
     CommonModule,
     RouterModule.forRoot([
