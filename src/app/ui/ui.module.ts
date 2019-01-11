@@ -10,12 +10,12 @@ import { FormComponent } from './form/form.component';
 import { TableComponent } from './table/table.component';
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, FooterComponent, InventoryListComponent, FormComponent, TableComponent],
+  declarations: [LayoutComponent, HeaderComponent, FooterComponent, FormComponent, TableComponent],
   imports: [
     CommonModule,
     RouterModule.forRoot([
       {path: '', component: LoginComponent},
-      {path: 'inventorylist', component: InventoryListComponent},
+      {path: 'inventorylist', component: TableComponent},
       {path: 'addform', component: FormComponent}
     ])
   ],
