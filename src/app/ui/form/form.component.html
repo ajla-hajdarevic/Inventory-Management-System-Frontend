@@ -13,57 +13,49 @@
       </span>
     </div>
 
-    <form class="contact100-form validate-form">
+    <div class="contact100-form validate-form">
       <div class="wrap-input100 validate-input" data-validate="Name is required">
         <span class="label-input100">Product Name:</span>
-        <input class="input100" type="text" name="name" placeholder="Enter full name">
+        <input class="input100" type="text" required [(ngModel)]="product.prodName" name="name" placeholder="Enter full name">
         <span class="focus-input100"></span>
       </div>
 
       <div class="wrap-input100 validate-input" data-validate = "Quantity is requierd!">
-        <span class="label-input100">Available:</span>
-        <input class="input100" type="number" name="quantity" placeholder="Enter how many products is available - quantity">
+        <span class="label-input100">Quantity:</span>
+        <input class="input100" type="number" required [(ngModel)]="product.quantity" name="quantity" placeholder="Enter how many products is available - quantity">
         <span class="focus-input100"></span>
       </div>
 
       <div class="wrap-input100 validate-input" data-validate="Price is require">
         <span class="label-input100">Price:</span>
-        <input class="input100" type="number" name="price" placeholder="Enter price per product">
+        <input class="input100" type="number" required [(ngModel)]="product.price" name="price" placeholder="Enter price per product">
         <span class="focus-input100"></span>
       </div>
 
-
-
-      <div class="wrap-input100 validate-input" data-validate = "Brand is required">
-        <span class="label-input100">Brand:</span>
-        <input class="input100" type="text" name="brand" placeholder="Enter brand">
-        <span class="focus-input100"></span>
-      </div>
 
 
       <div class="wrap-input100 validate-input" data-validate = "Supplier is required">
         <span class="label-input100">Supplier:</span>
-        <input class="input100" type="text" name="supplier" placeholder="Enter supplier">
+        <input class="input100" type="text" required [(ngModel)]="product.supplier" name="supplier" placeholder="Enter supplier">
         <span class="focus-input100"></span>
       </div>
-
 
 
       <div class="wrap-input100 validate-input" data-validate = "Type is required">
         <span class="label-input100">Product Type:</span>
-        <input class="input100" type="text" name="type" placeholder="Enter product type">
+        <input class="input100" type="text" required [(ngModel)]="product.prodType" name="type" placeholder="Enter product type">
         <span class="focus-input100"></span>
       </div>
 
       <div class="container-contact100-form-btn">
-        <button class="contact100-form-btn">
+        <button type="submit" class="contact100-form-btn" (click)="onSubmit()">
 						<span>
 							Submit
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
 						</span>
         </button>
       </div>
-    </form>
+    </div>
   </div>
 </div>
 
