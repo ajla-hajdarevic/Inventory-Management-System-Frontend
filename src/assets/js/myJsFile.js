@@ -20,12 +20,10 @@ function myFunction() {
   }
 }
 
-// function funckija() {
-//
-//   var table, tr, td, i;
-//   input = document.getElementById("myInput");
-//   filter = input.value.toUpperCase();
-//   table = document.getElementById("myTable");
-//   tr = table.getElementsByTagName("quantity");
-//
-// }
+function funckija() {
+
+  $scope.goTo = function (id) {
+    location.href = '/orderDetails/' + id;
+
+  }
+}

@@ -22,17 +22,16 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let product of products">
+    <tr *ngFor="let product of products" (click)="goTo(res.id)">
       <td>{{product.prodName}}</td>
       <td>{{product.supplier}}</td>
       <td>{{product.prodType}}</td>
       <td>{{product.price}}</td>
       <td>{{product.quantity}}</td>
       <td>
-        <p  *ngIf="product.quantity > 0" class="btn btn-success btn-sm">Active</p>
+        <p *ngIf="product.quantity > 0" class="btn btn-success btn-sm">Active</p>
         <p *ngIf="product.quantity < 1" class="btn btn-danger btn-sm">Disabled</p>
-        <!--<p [hidden]="false" class="btn btn-danger btn-sm">Disable</p>-->
-        <!--<button type="button" class="btn btn-success btn-sm">Active</button>-->
+
       </td>
 
     </tr>
@@ -41,5 +40,6 @@
 
 
 </div>
+
 
 

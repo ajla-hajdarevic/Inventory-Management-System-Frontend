@@ -3,7 +3,7 @@ import {ProductService} from '../../product.service';
 import {Router} from '@angular/router';
 import {Product} from '../../product';
 declare var myFunction: any;
-declare var funckija: any;
+declare var goTo: any;
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -24,7 +24,7 @@ export class TableComponent implements OnInit {
   }
 
   fun() {
-    new funckija;
+    new goTo;
   }
 
   f() {
