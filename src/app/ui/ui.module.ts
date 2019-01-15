@@ -26,7 +26,7 @@ import {FormsModule} from '@angular/forms';
       {path: 'orderList', component: OrderComponent},
       {path: 'saleList', component: SalesComponent},
       {path: 'orderform', component: OrderFormComponent},
-      {path: 'orderDetails', component: OrderDetailsComponent}
+      {path: 'orderDetails', component: OrderDetailsComponent},
       {path: 'api/products', component: FormComponent}
     ])
   ],
