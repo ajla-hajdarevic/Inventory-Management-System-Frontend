@@ -13,14 +13,14 @@ import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     UiModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     {
