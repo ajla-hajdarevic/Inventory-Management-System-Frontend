@@ -1,0 +1,79 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">Orders</a>
+  <form class="form-inline">
+
+    <button class="btn btn-outline-success my-2 my-sm-0" routerLink="/orderform">Add new order</button>
+  </form>
+
+</nav>
+
+<div class="table-responsive">
+  <table class="table table-hover" id="myTable">
+    <thead>
+    <tr>
+
+      <th scope="col">Order#</th>
+      <th scope="col">Status</th>
+      <th scope="col">Supplier</th>
+      <th scope="col">Paid</th>
+      <th scope="col">Total</th>
+      <th scope="col">Created</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>S00001</td>
+      <td>
+        <span class="badge badge-success">Active</span>
+      </td>
+      <td>Acme Supplies</td>
+      <td>
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      </td>
+      <td>KM440.00</td>
+      <td>Dec 12 2018</td>
+    </tr>
+    <tr>
+      <td>S00002</td>
+      <td>
+        <span class="badge badge-success">Active</span>
+      </td>
+      <td>Acme Supplies</td>
+      <td>
+        <input type="checkbox" class="form-check-input" id="exampleCheck2">
+      </td>
+      <td>KM150.00</td>
+      <td>Dec 12 2018</td>
+
+    </tr>
+    <tr>
+      <td>S00003</td>
+      <td>
+        <span class="badge badge-primary">Finalized</span>
+      </td>
+      <td>Swarovski</td>
+      <td>
+        <input type="checkbox" class="form-check-input" id="exampleCheck3">
+      </td>
+      <td>KM623.00</td>
+      <td>Dec 12 2018</td>
+    </tr>
+    <tr>
+      <td>S00004</td>
+      <td>
+        <span class="badge badge-success">Active</span>
+      </td>
+      <td>Swarovski</td>
+      <td>
+        <input type="checkbox" class="form-check-input" id="exampleCheck4">
+      </td>
+      <td>KM167.00</td>
+      <td>Dec 12 2018</td>
+    </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-dark" routerLink="/orderDetails">vidi order-details</button>
+
+
+</div>
