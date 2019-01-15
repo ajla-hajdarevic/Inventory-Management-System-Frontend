@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductService} from '../../product.service';
+import {Router} from '@angular/router';
+import {Product} from '../../product';
 declare var myFunction: any;
+declare var funckija: any;
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -7,9 +11,20 @@ declare var myFunction: any;
 })
 export class TableComponent implements OnInit {
 
-  constructor() { }
+  products: Product[];
+
+  constructor(private router: Router, private productService: ProductService) {}
+
 
   ngOnInit() {
+    this.productService.getProducts()
+      .subscribe( data => {
+        this.products = data;
+      });
+  }
+
+  fun() {
+    new funckija;
   }
 
   f() {
