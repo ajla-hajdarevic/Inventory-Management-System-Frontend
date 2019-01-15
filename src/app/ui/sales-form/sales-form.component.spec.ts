@@ -1,21 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TableComponent } from './table.component';
-import {describe, expect} from "@angular/core/testing/src/testing_internal";
+import { SalesFormComponent } from './sales-form.component';
 
-describe('TableComponent', () => {
-  let component: TableComponent;
-  let fixture: ComponentFixture<TableComponent>;
+describe('SalesFormComponent', () => {
+  let component: SalesFormComponent;
+  let fixture: ComponentFixture<SalesFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TableComponent ]
+      declarations: [ SalesFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TableComponent);
+    fixture = TestBed.createComponent(SalesFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
