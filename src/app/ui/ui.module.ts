@@ -14,9 +14,10 @@ import { OrderFormComponent } from './order-form/order-form.component';
 import { SalesFormComponent } from './sales-form/sales-form.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import {FormsModule} from '@angular/forms';
+import { SaleDetailsComponent } from './sale-details/sale-details.component';
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, FooterComponent, FormComponent, TableComponent, OrderComponent, SalesComponent, OrderFormComponent, SalesFormComponent, OrderDetailsComponent],
+  declarations: [LayoutComponent, HeaderComponent, FooterComponent, FormComponent, TableComponent, OrderComponent, SalesComponent, OrderFormComponent, SalesFormComponent, OrderDetailsComponent, SaleDetailsComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -26,8 +27,10 @@ import {FormsModule} from '@angular/forms';
       {path: 'orderList', component: OrderComponent},
       {path: 'saleList', component: SalesComponent},
       {path: 'orderform', component: OrderFormComponent},
-      {path: 'orderDetails', component: OrderDetailsComponent}
-      {path: 'api/products', component: FormComponent}
+      {path: 'orderDetails', component: OrderDetailsComponent},
+      {path: 'api/products', component: FormComponent},
+      {path: 'saleDetails', component: SaleDetailsComponent},
+      {path: 'saleForm', component: SalesFormComponent}
     ])
   ],
   exports: [LayoutComponent]
