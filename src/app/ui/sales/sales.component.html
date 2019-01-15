@@ -1,3 +1,74 @@
-<p>
-  sales works!
-</p>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">Sales</a>
+  <form class="form-inline">
+
+    <button class="btn btn-outline-success my-2 my-sm-0" routerLink="/saleForm">New sale</button>
+  </form>
+
+</nav>
+
+<div class="table-responsive">
+  <table class="table table-hover" id="myTable">
+    <thead>
+    <tr>
+
+      <th scope="col">Sale#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Paid</th>
+      <th scope="col">Total</th>
+      <th scope="col">Created</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>S00001</td>
+      <td>Ajla </td>
+      <td>Hajdarevic</td>
+      <td>
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      </td>
+      <td>KM440.00</td>
+      <td>Dec 12 2018</td>
+    </tr>
+    <tr>
+      <td>S00002</td>
+      <td>Azemina </td>
+      <td>Celebic</td>
+      <td>
+        <input type="checkbox" class="form-check-input" id="exampleCheck2">
+      </td>
+      <td>KM150.00</td>
+      <td>Dec 12 2018</td>
+
+    </tr>
+    <tr>
+      <td>S00003</td>
+      <td>Hana</td>
+      <td>Gicevic</td>
+      <td>
+        <input type="checkbox" class="form-check-input" id="exampleCheck3">
+      </td>
+      <td>KM623.00</td>
+      <td>Dec 12 2018</td>
+    </tr>
+    <tr>
+      <td>S00004</td>
+      <td>Meho</td>
+      <td>Mehic</td>
+      <td>
+        <input type="checkbox" class="form-check-input" id="exampleCheck4">
+      </td>
+      <td>KM167.00</td>
+      <td>Dec 12 2018</td>
+    </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-dark" routerLink="/saleDetails">View sales-details</button>
+
+  <nav class="navbar navbar-white bg-white">
+    <a class="navbar-brand"> </a>
+  </nav>
+
+</div>

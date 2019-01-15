@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SalesFormComponent } from './sales-form.component';
+import {describe, expect} from "@angular/core/testing/src/testing_internal";
 
 describe('SalesFormComponent', () => {
   let component: SalesFormComponent;
