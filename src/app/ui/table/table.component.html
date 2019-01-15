@@ -23,45 +23,19 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>Cotton T-shirt</td>
-      <td>Acme Supplies</td>
-      <td>T-shirt</td>
-      <td>30.00</td>
-      <td>5</td>
+    <tr *ngFor="let product of products">
+      <td>{{product.prodName}}</td>
+      <td>{{product.supplier}}</td>
+      <td>{{product.prodType}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.quantity}}</td>
       <td>
-        <button type="button" class="btn btn-success btn-sm">Active</button>
+        <p  *ngIf="product.quantity > 0" class="btn btn-success btn-sm">Active</p>
+        <p *ngIf="product.quantity < 1" class="btn btn-danger btn-sm">Disabled</p>
+        <!--<p [hidden]="false" class="btn btn-danger btn-sm">Disable</p>-->
+        <!--<button type="button" class="btn btn-success btn-sm">Active</button>-->
       </td>
-    </tr>
-    <tr>
-      <td>Cocktail Dress</td>
-      <td>Acme Supplies</td>
-      <td>Dress</td>
-      <td>150.00</td>
-      <td>3</td>
-      <td>
-        <button type="button" class="btn btn-success btn-sm">Active</button>
-      </td>
-    </tr>
-    <tr>
-      <td>Silver Watch</td>
-      <td>Swarovski</td>
-      <td>Watch</td>
-      <td>340.00</td>
-      <td>1</td>
-      <td>
-        <button type="button" class="btn btn-success btn-sm">Active</button>
-      </td>
-    </tr>
-    <tr>
-      <td>Diamond Ring</td>
-      <td>Swarovski</td>
-      <td>Jewelry</td>
-      <td>1500.00</td>
-      <td>2</td>
-      <td>
-        <button type="button" class="btn btn-success btn-sm">Active</button>
-      </td>
+
     </tr>
     </tbody>
   </table>
