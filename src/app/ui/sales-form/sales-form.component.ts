@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-
-=======
-declare var listofProducts: any;
->>>>>>> 4d4d8a50b7088c16f60ca0f0dcbbfa560c827abc
 
 @Component({
   selector: 'app-sales-form',
@@ -49,7 +44,6 @@ export class SalesFormComponent implements OnInit {
     this.contactList.push(this.createContact());
   }
 
-<<<<<<< HEAD
   // remove contact from group
   removeContact(index) {
     // this.contactList = this.form.get('contacts') as FormArray;
@@ -87,10 +81,6 @@ export class SalesFormComponent implements OnInit {
   submit() {
     console.log(this.form.value);
   }
-=======
-  f(){
-    new listofProducts();
-  }
 
->>>>>>> 4d4d8a50b7088c16f60ca0f0dcbbfa560c827abc
+
 }
