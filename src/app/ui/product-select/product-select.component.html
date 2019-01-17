@@ -1,0 +1,28 @@
+<!--<div class="form-group col-6">-->
+  <!--<label>Type of Contact</label>-->
+<!--<select *ngFor="let product of products">-->
+  <!--<option value="prodName">{{product.prodName}}</option>-->
+<!--</select>-->
+<!--</div>-->
+<!--<table>-->
+<!--<thead>-->
+<!--<tr>-->
+
+  <!--<th scope="col">Product Name</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+
+<!--<tr *ngFor="let product of products">-->
+  <!--<td>{{product.prodName}}</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+
+<div class="form-group col-6">
+  <label>Type of Contact</label>
+  <select type="text" [(ngModel)]="selectedLevel" (change)="selected()" >
+    <option *ngFor="let product of products" [ngValue]="product">{{product.prodName}}</option>
+  </select>
+  {{selectedLevel | json}}
+</div>
