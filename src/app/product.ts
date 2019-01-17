@@ -7,6 +7,6 @@ export class Product {
   prodType: string;
   price: number;
   quantity: number;
-  supplier_id: number;
+  supplierId: number;
 }
 

@@ -4,8 +4,8 @@ import {Router} from '@angular/router';
 import {Product} from '../../product';
 import {SupplierService} from '../../supplier.service';
 import {Supplier} from '../../supplier';
+import {switchMap} from 'rxjs/operators';
 declare var myFunction: any;
-declare var goTo: any;
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -15,25 +15,28 @@ export class TableComponent implements OnInit {
 
   products: Product[];
   suppliers: Supplier[];
+  supplierMapper = {};
 
-  constructor(private router: Router, private productService: ProductService, private supplierService: SupplierService) {}
+
+  constructor(private router: Router,
+              private productService: ProductService,
+              private supplierService: SupplierService) {}
 
 
   ngOnInit() {
     this.productService.getProducts()
-      .subscribe( data => {
+      .pipe(switchMap(data => {
         this.products = data;
-      });
-    this.supplierService.getSuppliers()
+        console.log(this.products);
+        return this.supplierService.getSuppliers();
+      }))
       .subscribe(data => {
         this.suppliers = data;
+        this.suppliers.forEach((item) => {
+          this.supplierMapper[item.id] = item;
+        });
+        console.log(this.suppliers);
       });
-  }
-
-
-
-  fun() {
-    new goTo;
   }
 
   f() {

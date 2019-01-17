@@ -24,13 +24,7 @@
     <tbody>
     <tr *ngFor="let product of products">
       <td>{{product.prodName}}</td>
-      <!--<td>{{product.supplier_id}}</td>-->
-      <td>
-        <div *ngFor="let supplier of suppliers">
-          <div *ngIf="supplier.id == product.supplier_id">blah</div>
-        {{supplier.supplierName}}
-        </div>
-      </td>
+      <td>{{supplierMapper[product.supplierId]?.supplierName}}</td>
       <td>{{product.prodType}}</td>
       <td>{{product.price}}</td>
       <td>{{product.quantity}}</td>
