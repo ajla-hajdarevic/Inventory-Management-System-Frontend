@@ -24,7 +24,13 @@ export class TableComponent implements OnInit {
       .subscribe( data => {
         this.products = data;
       });
+    this.supplierService.getSuppliers()
+      .subscribe(data => {
+        this.suppliers = data;
+      });
   }
+
+
 
   fun() {
     new goTo;

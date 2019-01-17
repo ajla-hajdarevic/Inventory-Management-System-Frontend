@@ -15,9 +15,10 @@ import { SalesFormComponent } from './sales-form/sales-form.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import {FormsModule} from '@angular/forms';
 import { SaleDetailsComponent } from './sale-details/sale-details.component';
+import { ProductSelectComponent } from './product-select/product-select.component';
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, FooterComponent, FormComponent, TableComponent, OrderComponent, SalesComponent, OrderFormComponent, SalesFormComponent, OrderDetailsComponent, SaleDetailsComponent],
+  declarations: [LayoutComponent, HeaderComponent, FooterComponent, FormComponent, TableComponent, OrderComponent, SalesComponent, OrderFormComponent, SalesFormComponent, OrderDetailsComponent, SaleDetailsComponent, ProductSelectComponent],
   imports: [
     CommonModule,
     FormsModule,
