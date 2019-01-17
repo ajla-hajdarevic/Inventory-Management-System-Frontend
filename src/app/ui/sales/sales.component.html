@@ -24,7 +24,7 @@
     <tr *ngFor="let sale of sales">
       <td>{{sale.id}}</td>
       <td *ngIf="sale.paid" class="btn btn-success btn-sm">Paid</td>
-      <td *ngIf="!sale.paid" class="btn btn-success btn-sm">Paid</td>
+      <td *ngIf="!sale.paid" class="btn btn-danger btn-sm">Not Paid</td>
       <td>{{sale.totalUnits}}</td>
       <td>{{sale.totalPrice}}</td>
       <td>{{sale.salesDate}}</td>
