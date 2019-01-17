@@ -27,3 +27,7 @@ function funckija() {
 
   }
 }
+
+function listofProducts() {
+  
+}

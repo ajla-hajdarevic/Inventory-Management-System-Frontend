@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {ProductService} from '../../product.service';
 import {Router} from '@angular/router';
 import {Product} from '../../product';
+import {SupplierService} from '../../supplier.service';
+import {Supplier} from '../../supplier';
 declare var myFunction: any;
 declare var goTo: any;
 @Component({
@@ -12,8 +14,9 @@ declare var goTo: any;
 export class TableComponent implements OnInit {
 
   products: Product[];
+  suppliers: Supplier[];
 
-  constructor(private router: Router, private productService: ProductService) {}
+  constructor(private router: Router, private productService: ProductService, private supplierService: SupplierService) {}
 
 
   ngOnInit() {

@@ -22,9 +22,14 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let product of products" (click)="goTo(res.id)">
+    <tr *ngFor="let product of products">
       <td>{{product.prodName}}</td>
-      <td>{{product.supplier}}</td>
+      <!--<td>{{product.supplier_id}}</td>-->
+      <td>
+        <div *ngFor="let supplier of suppliers">
+        <div *ngIf="supplier.id == product.supplier_id"> {{supplier.supplierName}}</div>
+        </div>
+      </td>
       <td>{{product.prodType}}</td>
       <td>{{product.price}}</td>
       <td>{{product.quantity}}</td>
