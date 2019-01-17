@@ -21,53 +21,13 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>S00001</td>
-
-      <td>
-        <p *ngIf="true" class="btn btn-success btn-sm">Paid</p>
-      </td>
-      <td>30</td>
-
-      <td>KM440.00</td>
-
-      <td>Dec 12 2018</td>
-    </tr>
-    <tr>
-      <td>S00002</td>
-
-      <td>
-        <p *ngIf="true" class="btn btn-success btn-sm">Paid</p>
-      </td>
-      <td>30</td>
-
-      <td>KM150.00</td>
-      <td>Dec 12 2018</td>
-
-    </tr>
-    <tr>
-      <td>S00003</td>
-
-      <td>
-        <p *ngIf="true" class="btn btn-success btn-sm">Paid</p>
-      </td>
-      <td>30</td>
-
-      <td>KM623.00</td>
-      <td>Dec 12 2018</td>
-    </tr>
-    <tr>
-      <td>S00004</td>
-
-
-      <td>
-        <p *ngIf="true" class="btn btn-success btn-sm">Paid</p>
-
-      </td>
-      <td>30</td>
-
-      <td>KM167.00</td>
-      <td>Dec 12 2018</td>
+    <tr *ngFor="let sale of sales">
+      <td>{{sale.id}}</td>
+      <td *ngIf="sale.paid" class="btn btn-success btn-sm">Paid</td>
+      <td *ngIf="!sale.paid" class="btn btn-success btn-sm">Paid</td>
+      <td>{{sale.totalUnits}}</td>
+      <td>{{sale.totalPrice}}</td>
+      <td>{{sale.salesDate}}</td>
     </tr>
     </tbody>
   </table>

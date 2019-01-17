@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {ProductService} from '../../product.service';
+import {Product} from '../../product';
 
 
 @Component({
@@ -11,17 +13,23 @@ export class SalesFormComponent implements OnInit {
 
   public form: FormGroup;
   public contactList: FormArray;
+  products: Product[];
+  selectedLevel;
 
   // returns all form groups under contacts
   get contactFormGroup() {
     return this.form.get('contacts') as FormArray;
   }
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private productService: ProductService) {}
 
   ngOnInit() {
+    this.productService.getProducts()
+      .subscribe( data => {
+        this.products = data;
+      });
     this.form = this.fb.group({
-      name: [null, Validators.compose([Validators.required])],
+      name: [null],
       organization: [null],
       contacts: this.fb.array([this.createContact()])
     });
@@ -76,7 +84,9 @@ export class SalesFormComponent implements OnInit {
     const formGroup = this.contactList.controls[index] as FormGroup;
     return formGroup;
   }
-
+  selected(){
+    alert(this.selectedLevel.name)
+  }
   // method triggered when form is submitted
   submit() {
     console.log(this.form.value);
