@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {environment} from "../environments/environment.prod";
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,5 @@ import {environment} from "../environments/environment.prod";
 export class AppComponent {
   title = 'pokusaj100';
   environmentName = environment.apiUrl;
+
 }

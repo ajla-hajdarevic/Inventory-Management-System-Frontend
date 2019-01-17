@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var e: any;
 @Component({
   selector: 'app-sale-details',
   templateUrl: './sale-details.component.html',
@@ -11,5 +11,6 @@ export class SaleDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

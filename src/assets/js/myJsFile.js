@@ -18,12 +18,5 @@ function myFunction() {
       }
     }
   }
-}
 
-function funckija() {
-
-  $scope.goTo = function (id) {
-    location.href = '/orderDetails/' + id;
-
-  }
 }

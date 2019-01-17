@@ -13,14 +13,18 @@ import { SalesComponent } from './sales/sales.component';
 import { OrderFormComponent } from './order-form/order-form.component';
 import { SalesFormComponent } from './sales-form/sales-form.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
-import {FormsModule} from '@angular/forms';
 import { SaleDetailsComponent } from './sale-details/sale-details.component';
+import { DodajProdukteComponent } from './dodaj-produkte/dodaj-produkte.component';
+import {BrowserModule} from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, FooterComponent, FormComponent, TableComponent, OrderComponent, SalesComponent, OrderFormComponent, SalesFormComponent, OrderDetailsComponent, SaleDetailsComponent],
+  declarations: [LayoutComponent, HeaderComponent, FooterComponent, FormComponent, TableComponent, OrderComponent, SalesComponent, OrderFormComponent, SalesFormComponent, OrderDetailsComponent, SaleDetailsComponent, DodajProdukteComponent],
   imports: [
     CommonModule,
     FormsModule,
+    BrowserModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {path: '', component: LoginComponent},
       {path: 'inventorylist', component: TableComponent},
