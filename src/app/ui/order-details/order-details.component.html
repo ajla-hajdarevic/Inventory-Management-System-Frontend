@@ -10,15 +10,6 @@
     <h5 class="card-title">Orders #0001</h5>
     <form>
       <fieldset disabled>
-        <div class="form-group ">
-          <label for="inputState">Issue to</label>
-          <select id="inputState" class="form-control">
-            <option selected>Supplier 1</option>
-            <option selected>Supplier 2</option>
-            <option selected>Supplier 3</option>
-            <option selected>Supplier 4</option>
-          </select>
-        </div>
         <div class="form-group">
           <label for="disabledTextInput2">Issue date: </label>
           <input type="date" id="disabledTextInput2" class="form-control" placeholder="Dec 12 2018">
@@ -38,34 +29,19 @@
 
           <th scope="col">Product Name</th>
           <th scope="col">Quantity</th>
+          <th scope="col">Supplier</th>
           <th scope="col">Price(KM)</th>
           <th scope="col">Total(KM)</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>Cotton T-shirt</td>
-          <td>1</td>
-          <td>55.00</td>
-          <td>55.00</td>
-        </tr>
-        <tr>
-          <td>Cocktail Dress</td>
-          <td>3</td>
-          <td>70.00</td>
-          <td>210</td>
-        </tr>
-        <tr>
-          <td>Silver Watch</td>
-          <td>2</td>
-          <td>490.00</td>
-          <td>980.00</td>
-        </tr>
-        <tr>
-          <td>Diamond Ring</td>
-          <td>5</td>
-          <td>750.00</td>
-          <td>3.750</td>
+        <tr *ngFor="let order of orderDetails">
+          <td>{{productMapper[order.productId]?.prodName}}</td>
+          <td>{{order.orderedQuantity}}</td>
+          <td>{{supplierMapper[productMapper[order.productId]?.supplierId]?.supplierName}}</td>
+          <td>{{productMapper[order.productId]?.price}}</td>
+          <td>{{order.orderedQuantity * productMapper[order.productId]?.price}}</td>
+
         </tr>
         </tbody>
       </table>

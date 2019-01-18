@@ -37,6 +37,8 @@ export class TableComponent implements OnInit {
         });
         console.log(this.suppliers);
       });
+
+
   }
 
   f() {
