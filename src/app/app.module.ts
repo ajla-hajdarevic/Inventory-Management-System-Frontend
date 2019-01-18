@@ -9,12 +9,16 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {LoginComponent} from './login/login.component';
 import {ApiInterceptor} from './api.interceptor';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { UserComponent } from './user/user.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    UserComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

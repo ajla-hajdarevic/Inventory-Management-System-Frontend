@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TokenStorageService} from '../../token-storage.service';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tokenStorage: TokenStorageService) {
+  }
 
   collapsed = true;
+
   toggleCollapsed(): void {
     this.collapsed = !this.collapsed;
   }
-  ngOnInit() {
-  }
 
+
+  private roles: string[];
+  private authority: string;
+
+  ngOnInit() {
+
+    if (this.tokenStorage.getToken()) {
+      this.roles = this.tokenStorage.getAuthorities();
+      this.roles.every(role => {
+       if(role === 'ROLE_USER') this.authority = 'user';
+        return true;
+      });
+
+
+    }
+
+  }
 }

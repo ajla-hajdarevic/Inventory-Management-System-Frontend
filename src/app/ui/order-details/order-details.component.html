@@ -51,10 +51,10 @@
       <a class="navbar-brand"> </a>
     </nav>
 
-    <form>
+    <form *ngFor="let orderDetail of orderDetails">
       <fieldset disabled>
         <div class="form-group">
-          <label for="disabledTextInput3">Total units: </label>
+          <label for="disabledTextInput3" >Total units: </label>
           <input type="text" id="disabledTextInput3" class="form-control" placeholder="22">
         </div>
         <div class="form-group">
