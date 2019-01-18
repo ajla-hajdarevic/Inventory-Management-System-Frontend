@@ -12,7 +12,7 @@
       <fieldset disabled>
         <div class="form-group">
           <label for="disabledTextInput2">Issue date: </label>
-          <input type="date" id="disabledTextInput2" class="form-control" placeholder="Dec 12 2018">
+          <input type="text" id="disabledTextInput2" class="form-control" placeholder="Dec 12 2018">
         </div>
       </fieldset>
     </form>
@@ -35,12 +35,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let order of orderDetails">
-          <td>{{productMapper[order.productId]?.prodName}}</td>
-          <td>{{order.orderedQuantity}}</td>
-          <td>{{supplierMapper[productMapper[order.productId]?.supplierId]?.supplierName}}</td>
-          <td>{{productMapper[order.productId]?.price}}</td>
-          <td>{{order.orderedQuantity * productMapper[order.productId]?.price}}</td>
+        <tr *ngFor="let orderDetail of orderDetails">
+          <td>{{productMapper[orderDetail.productId]?.prodName}}</td>
+          <td>{{orderDetail.orderedQuantity}}</td>
+          <td>{{supplierMapper[productMapper[orderDetail.productId]?.supplierId]?.supplierName}}</td>
+          <td>{{productMapper[orderDetail.productId]?.price}}</td>
+          <td>{{orderDetail.orderedQuantity * productMapper[orderDetail.productId]?.price}}</td>
 
         </tr>
         </tbody>
@@ -55,11 +55,11 @@
       <fieldset disabled>
         <div class="form-group">
           <label for="disabledTextInput3">Total units: </label>
-          <input type="text" id="disabledTextInput3" class="form-control" placeholder="7">
+          <input type="text" id="disabledTextInput3" class="form-control" placeholder="22">
         </div>
         <div class="form-group">
           <label for="disabledTextInput4">Total(KM): </label>
-          <input type="text" id="disabledTextInput4" class="form-control" placeholder="5.700">
+          <input type="text" id="disabledTextInput4" class="form-control" placeholder="473">
         </div>
       </fieldset>
     </form>

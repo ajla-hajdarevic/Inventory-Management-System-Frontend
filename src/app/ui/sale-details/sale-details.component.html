@@ -35,33 +35,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>Cotton T-shirt</td>
-          <td>Acme Supplies</td>
-          <td>1</td>
-          <td>55.00</td>
-          <td>55.00</td>
-        </tr>
-        <tr>
-          <td>Cocktail Dress</td>
-          <td>Acme Supplies</td>
-          <td>3</td>
-          <td>70.00</td>
-          <td>210</td>
-        </tr>
-        <tr>
-          <td>Silver Watch</td>
-          <td>Swarovski</td>
-          <td>2</td>
-          <td>490.00</td>
-          <td>980.00</td>
-        </tr>
-        <tr>
-          <td>Diamond Ring</td>
-          <td>Swarovski</td>
-          <td>5</td>
-          <td>750.00</td>
-          <td>3.750</td>
+        <tr *ngFor="let saleDetail of saleDetails">
+          <td>{{productMapper[saleDetail.productId]?.prodName}}</td>
+          <!--<td>{{supplierMapper[productMapper[order.productId]?.supplierId]?.supplierName}}</td>-->
+          <td>{{saleDetail.soldQuantity}}</td>
+          <td>{{productMapper[saleDetail.productId]?.price}}</td>
+          <td>{{saleDetail.soldQuantity * productMapper[saleDetail.productId]?.price}}</td>
         </tr>
         </tbody>
       </table>

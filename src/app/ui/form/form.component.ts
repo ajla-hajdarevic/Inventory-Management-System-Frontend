@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from '../../product';
 import {ProductService} from '../../product.service';
+import {SupplierService} from '../../supplier.service';
+import {Supplier} from '../../supplier';
 
 @Component({
   selector: 'app-form',
@@ -9,16 +11,24 @@ import {ProductService} from '../../product.service';
 })
 export class FormComponent implements OnInit {
 
+  suppliers: Supplier[];
   product:Product = new Product();
   submitted = false;
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService,
+              private supplierService: SupplierService) { }
 
   ngOnInit() {
     this.productService.getProductsList()
       .subscribe(() => {
         console.log(456);
       })
+
+    this.supplierService.getSuppliers()
+      .subscribe( data => {
+        this.suppliers = data;
+      });
+
   }
 
   newProduct(): void {
