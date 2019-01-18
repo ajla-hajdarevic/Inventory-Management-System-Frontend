@@ -1,0 +1,72 @@
+
+<div class="card">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active text-center"  href="#">New sale</a>
+      </li>
+    </ul>
+  </div>
+  <div class="container p-3">
+    <div class="row">
+      <div class="col-12">
+        <form [formGroup]="form" (submit)="submit()">
+          <div class="card">
+            <div class="card-header">Sales Details</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="form-group col-12">
+                  <label>Issue Date</label>
+                  <input class="form-control" formControlName="name" type="date">
+                  <span class="text-danger" *ngIf="form.controls['name'].touched && form.controls['name'].hasError('required')">
+                  Issue Date is required! </span>
+                </div>
+              </div>
+            </div>
+            <div class="card-header">Product Details</div>
+            <div class="card-body" formArrayName="products">
+              <div class="row">
+                <div class="col-6" *ngFor="let product of productFormGroup.controls; let i = index;">
+                  <div [formGroupName]="i" class="row">
+                    <div class="form-group col-6">
+                      <label>Product Name</label>
+                      <select (change)="changedFieldType(i)" class="form-control" formControlName="name" type="text">
+                        <option value="email" >Email</option>
+                        <option value="phone">Phone</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-6">
+                      <label>Total quantity</label>
+                      <label class="form-control" formControlName="name" type="number">77</label>
+                      <span class="text-danger" *ngIf="getProductsFormGroup(i).controls['name'].touched && getProductsFormGroup(i).controls['name'].hasError('required')"></span>
+                    </div>
+
+                    <div class="form-group col-12">
+                      <label>Quantity to sell</label>
+                      <input class="form-control" formControlName="name" type="number">
+                      <span class="text-danger" *ngIf="getProductsFormGroup(i).controls['name'].touched && getProductsFormGroup(i).controls['name'].hasError('required')">
+                      Quantity is required! </span>
+                      <span class="text-danger" *ngIf="getProductsFormGroup(i).controls['name'].touched && getProductsFormGroup(i).controls['name'].hasError('email')">
+                      Email is not valid! </span>
+                      <span class="text-danger" *ngIf="getProductsFormGroup(i).controls['name'].touched && getProductsFormGroup(i).controls['name'].hasError('pattern')">
+                      Phone no. is not valid! </span>
+                    </div>
+                    <div class="form-group col-12 text-right">
+                      <button class="btn btn-danger" type="button" (click)="removeProduct(i)"> Remove </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="col-12">
+                <button class="btn btn-primary m-1" type="button" (click)="addProduct()"> Add Product </button>
+                <button class="btn btn-success m-1" [disabled]="!form.valid" type="submit"> Submit Sale </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
