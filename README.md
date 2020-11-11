@@ -1,5 +1,7 @@
 # Inventory Management System
 
+This type of a software system is used for tracking inventory levels, orders and sales, especially useful for retail organizations. The main purposes of this kind of a system are improving and controlling business processes inside an organization.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
 ## Development server
